@@ -21,7 +21,7 @@ const newUserGoogle = async (req, res) => {
       SECRETKEY,
       { expiresIn: "24h" }
     );
-    res.json({ token, user });
+    return res.status(200).json({ token, user });
 
   } else {
     const validpassword = await bcrypt.compare(id, userExist[0].password);
@@ -37,7 +37,7 @@ const newUserGoogle = async (req, res) => {
         { expiresIn: "24h" }
       );
       const user = userExist[0];
-      res.json({ token, user });
+      return res.status(200).json({ token, user });
     }
   }
 };
