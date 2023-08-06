@@ -1,7 +1,7 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const SECRETKEY = process.env.SECRETKEY;
+const SECRETKEY = "53740620878-u4ej58ai4a48tt4u0htuc736fbnodbvr.apps.googleusercontent.com";
 
 const newUserGoogle = async (req, res) => {
   const { name, email, picture, verified_email, id } = req.body;
