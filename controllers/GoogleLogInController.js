@@ -40,6 +40,8 @@ const newUserGoogle = async (req, res) => {
       return res.status(200).json({ token, user });
     }
   }
+
+  res.status(500).json({ message: "incorrect password" });
 };
 
 
