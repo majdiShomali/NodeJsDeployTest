@@ -33,6 +33,10 @@ app.use(errorHandler);
 app.use(Protected)
 
 
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', reason.stack || reason);
+});
+
 module.exports = {
   server: app,
   start: () => {
