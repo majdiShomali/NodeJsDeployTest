@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const SECRETKEY = process.env.SECRETKEY;
 
 const newUserGoogle = async (req, res) => {
+  console.log("New user")
   res.status(500).json({ message: "incorrect password" });
   // const { name, email, picture, verified_email, id } = req.body;
   // const userExist = await User.find({ email: email });
